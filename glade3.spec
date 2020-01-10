@@ -1,7 +1,7 @@
 Summary:	User Interface Designer for GTK+ 2
 Name:		glade3
 Version:	3.8.3
-Release:	5%{?dist}
+Release:	6%{?dist}
 Epoch:		2
 License:	GPLv2+
 Group:		Development/Tools
@@ -9,7 +9,7 @@ URL:		http://glade.gnome.org/
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/glade3/3.8/glade3-%{version}.tar.xz
 
 Requires:	hicolor-icon-theme
-Requires:	%{name}-libgladeui = %{?epoch:%{epoch}:}:%{version}-%{release}
+Requires:	%{name}-libgladeui = %{?epoch:%{epoch}:}%{version}-%{release}
 BuildRequires:	desktop-file-utils
 BuildRequires:	gettext
 BuildRequires:	gnome-doc-utils
@@ -185,6 +185,10 @@ gtk-update-icon-cache %{_datadir}/icons/hicolor &>/dev/null || :
 %{_includedir}/libgladeui-1.0/gladeui
 
 %changelog
+* Tue Sep 19 2017 Ray Strode <rstrode@redhat.com> - 2:3.8.3-6
+- Drop stray colon from glade3-libgladeui requires
+  Resolves: #1230929
+
 * Fri Jan 24 2014 Daniel Mach <dmach@redhat.com> - 2:3.8.3-5
 - Mass rebuild 2014-01-24
 
