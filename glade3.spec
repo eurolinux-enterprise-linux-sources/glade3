@@ -1,7 +1,7 @@
 Summary:	User Interface Designer for GTK+ 2
 Name:		glade3
 Version:	3.8.3
-Release:	3%{?dist}
+Release:	5%{?dist}
 Epoch:		2
 License:	GPLv2+
 Group:		Development/Tools
@@ -185,6 +185,12 @@ gtk-update-icon-cache %{_datadir}/icons/hicolor &>/dev/null || :
 %{_includedir}/libgladeui-1.0/gladeui
 
 %changelog
+* Fri Jan 24 2014 Daniel Mach <dmach@redhat.com> - 2:3.8.3-5
+- Mass rebuild 2014-01-24
+
+* Fri Dec 27 2013 Daniel Mach <dmach@redhat.com> - 2:3.8.3-4
+- Mass rebuild 2013-12-27
+
 * Sun Feb 24 2013 Kalev Lember <kalevlember@gmail.com> - 2:3.8.3-3
 - Remove the desktop file vendor prefix
 
